@@ -1,0 +1,22 @@
+
+.xh-video{
+	position: fixed;
+	width: 100%;
+	top: 0;
+	bottom: 0;
+	background-color: #000;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-box-pack: center;
+	-webkit-justify-content: center;
+	        justify-content: center;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	        align-items: center;
+}
+#myVideo{
+	width: 100%;
+}
+
+

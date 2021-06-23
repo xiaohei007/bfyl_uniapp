@@ -1,0 +1,140 @@
+{
+
+	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+		{
+			"path": "pages/tabBar/activity/index",
+			"style": {
+				// "navigationBarBackgroundColor":"#4CD964",
+				"navigationBarTitleText": "活动"
+			}
+		},
+		{
+			"path": "pages/tabBar/news/index",
+			"style": {
+				"navigationBarTitleText": "消息"
+			}
+		},
+		{
+			"path": "pages/tabBar/shopCode/index",
+			"style": {
+				"navigationBarTitleText": "店铺码"
+			}
+		},
+		{
+			"path": "pages/tabBar/pointsMall/index",
+			"style": {
+				"navigationBarTitleText": "积分商城"
+			}
+		},
+		{
+			"path": "pages/tabBar/mine/index",
+			"style": {
+				"navigationBarTitleText": "我的"
+			}
+		},
+		// {
+		// 	"path": "pages/tabBar/service/service",
+		// 	"style": {
+		// 		"navigationBarTitleText": "客服中心",
+		// 		"usingComponents": {
+		// 			"van-row": "/wxcomponents/vant-weapp/row/index",
+		// 			"van-col": "/wxcomponents/vant-weapp/col/index",
+		// 			"van-dialog": "/wxcomponents/vant-weapp/dialog/index"
+		// 		}
+		// 	}
+		// },
+		{
+			"path": "pages/login/login",
+			"style": {
+				"navigationBarTitleText": "登录",
+				"navigationStyle": "custom",
+				"usingComponents": {
+					"van-button": "/wxcomponents/vant-weapp/button/index"
+				}
+			}
+		}, {
+			"path": "pages/webview/webview",
+			"style": {}
+		}, {
+			"path": "pages/noLocation/noLocation",
+			"style": {
+				"navigationBarTitleText": "定位异常",
+				"enablePullDownRefresh": false
+			}
+		}
+	],
+	"subPackages": [
+		// ,{
+		// 	"root": "pages/service/",
+		// 	"name": "service",
+		// 	"pages": [{
+		// 		"path": "onlineService/index",
+		// 		"style": {
+		// 			"navigationBarTitleText": "在线客户",
+		// 			"usingComponents":{
+		// 				  "van-row": "/wxcomponents/vant-weapp/row/index",
+		// 				  "van-col": "/wxcomponents/vant-weapp/col/index"
+		// 			}
+		// 		}
+		// 	}]
+		// }
+	],
+	// "preloadRule": {
+	// 	"pages/tabBar/personal/index": {
+	// 		"network": "all",
+	// 		"packages": ["personal"]
+	// 	}
+	// },
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarBackgroundColor": "#FFFFFF",
+		"backgroundColor": "#F0F0F0"
+	},
+	"tabBar": {
+		"selectedColor": "#DD524D",
+		"borderStyle": "white",
+		"list": [{
+				"pagePath": "pages/tabBar/activity/index",
+				"iconPath": "static/tabsImg/activity.png",
+				"selectedIconPath": "static/tabsImg/activitys.png",
+				"text": "活动"
+			},
+			{
+				"pagePath": "pages/tabBar/news/index",
+				"iconPath": "static/tabsImg/notice.png",
+				"selectedIconPath": "static/tabsImg/notices.png",
+				"text": "消息"
+			},
+			{
+				"pagePath": "pages/tabBar/shopCode/index",
+				"iconPath": "static/tabsImg/storeQr.png",
+				"selectedIconPath": "static/tabsImg/storeQr.png",
+				"text": "店铺码"
+			},
+			{
+				"pagePath": "pages/tabBar/pointsMall/index",
+				"iconPath": "static/tabsImg/jifen.png",
+				"selectedIconPath": "static/tabsImg/jifens.png",
+				"text": "积分商城"
+			},
+			{
+				"pagePath": "pages/tabBar/mine/index",
+				"iconPath": "static/tabsImg/mine.png",
+				"selectedIconPath": "static/tabsImg/mines.png",
+				"text": "我的"
+			}
+		]
+	},
+	"condition": { //模式配置，仅开发期间生效
+		"current": 0, //当前激活的模式(list 的索引项)        
+		"list": []
+	}
+	// ,"easycom": {
+	// 	"autoscan": true,
+	// 	"custom": {
+	// 		"^xh-(.*)": "@/components/xh-$1.vue" ,// 匹配components目录内的vue文件
+	// 		"^easy-(.*)": "@/components/easy-$1.vue" // 匹配components目录内的vue文件
+	// 		// "^vue-file-(.*)": "packageName/path/to/vue-file-$1.vue" // 匹配node_modules内的vue文件
+	// 	}
+	// }
+}

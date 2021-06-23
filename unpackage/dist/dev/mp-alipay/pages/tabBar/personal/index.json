@@ -1,0 +1,8 @@
+{
+  "defaultTitle": "个人中心",
+  "usingComponents": {
+    "xh-winning-window": "/components/xh-winning-window",
+    "xh-msg-dialog": "/components/xh-msg-dialog",
+    "home-swiper": "/pages/tabBar/personal/homeSwiper"
+  }
+}

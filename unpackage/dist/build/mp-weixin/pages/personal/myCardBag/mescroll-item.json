@@ -1,0 +1,9 @@
+{
+  "component": true,
+  "usingComponents": {
+    "mescroll-uni": "/components/mescroll-uni/mescroll-uni",
+    "not-converted": "/pages/personal/myCardBag/notConverted",
+    "converted": "/pages/personal/myCardBag/converted",
+    "lost-efficacy": "/pages/personal/myCardBag/lostEfficacy"
+  }
+}

@@ -1,0 +1,134 @@
+@charset "UTF-8";
+/**
+ * 这里是uni-app内置的常用样式变量
+ *
+ * uni-app 官方扩展插件及插件市场（https://ext.dcloud.net.cn）上很多三方插件均使用了这些样式变量
+ * 如果你是插件开发者，建议你使用scss预处理，并在插件代码中直接使用这些变量（无需 import 这个文件），方便用户通过搭积木的方式开发整体风格一致的App
+ *
+ */
+/**
+ * 如果你是App开发者（插件使用者），你可以通过修改这些变量来定制自己的插件主题，实现自定义主题功能
+ *
+ * 如果你的项目同样使用了scss预处理，你也可以直接在你的 scss 代码中使用如下变量，同时无需 import 这个文件
+ */
+/* 颜色变量 */
+/* 行为相关颜色 */
+/* 文字基本颜色 */
+/* 背景颜色 */
+/* 边框颜色 */
+/* 尺寸变量 */
+/* 文字尺寸 */
+/* 图片尺寸 */
+/* Border Radius */
+/* 水平间距 */
+/* 垂直间距 */
+/* 透明度 */
+/* 文章场景相关 */
+.xh-old-dialog .xh-old-dialog-body {
+  position: fixed;
+  top: 50%;
+  left: 27.15rpx;
+  right: 27.15rpx;
+  z-index: 2;
+}
+.xh-old-dialog .xh-old-dialog-header {
+  height: 253.4rpx;
+  width: 70%;
+  position: relative;
+  z-index: 1;
+  display: block;
+  margin: 0 auto 108.6rpx;
+}
+.xh-old-dialog .xh-old-dialog-arc {
+  position: absolute;
+  height: 181rpx;
+  top: 249.78rpx;
+  left: 38.01rpx;
+  right: 38.01rpx;
+  overflow: hidden;
+  z-index: 1;
+}
+.xh-old-dialog .xh-old-dialog-arc::after {
+  content: '';
+  width: 140%;
+  height: 181rpx;
+  position: absolute;
+  left: -20%;
+  top: -126.7rpx;
+  z-index: -1;
+  border-radius: 0 0 50% 50%;
+  border-bottom: 3px solid #FFCB3E;
+}
+.xh-old-dialog .xh-old-dialog-icons {
+  width: 81.45rpx;
+  height: 86.88rpx;
+  position: absolute;
+  bottom: 81.45rpx;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+.xh-old-dialog .xh-old-dialog-bg {
+  position: absolute;
+  left: 38.01rpx;
+  right: 38.01rpx;
+  bottom: 0;
+  top: 190.05rpx;
+  border-radius: 20px;
+  background-image: -webkit-linear-gradient(top, #E71919, #A31015);
+  background-image: linear-gradient(180deg, #E71919, #A31015);
+  z-index: -1;
+  border: 3px solid #FFCB3E;
+}
+.xh-old-dialog .xh-old-dialog-black {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 1;
+}
+.xh-old-dialog .close {
+  width: 72.4rpx;
+  height: 72.4rpx;
+  position: absolute;
+  bottom: -108.6rpx;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+/*自定义弹窗*/
+.xhOldDialog {
+  -webkit-animation-name: xhOldDialog;
+          animation-name: xhOldDialog;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+}
+@-webkit-keyframes xhOldDialog {
+0% {
+    -webkit-transform: scale(0.4);
+            transform: scale(0.4);
+    opacity: 0.3;
+}
+100% {
+    -webkit-transform: scale(1) translateY(-60%);
+            transform: scale(1) translateY(-60%);
+    opacity: 1;
+}
+}
+@keyframes xhOldDialog {
+0% {
+    -webkit-transform: scale(0.4);
+            transform: scale(0.4);
+    opacity: 0.3;
+}
+100% {
+    -webkit-transform: scale(1) translateY(-60%);
+            transform: scale(1) translateY(-60%);
+    opacity: 1;
+}
+}
+

@@ -1,0 +1,9 @@
+{
+  "component": true,
+  "usingComponents": {
+    "mescroll-uni": "/components/mescroll-uni/mescroll-uni",
+    "not-converted": "/pages/personal/welfare/not-converted",
+    "converted": "/pages/personal/welfare/converted",
+    "lost-efficacy": "/pages/personal/welfare/lost-efficacy"
+  }
+}

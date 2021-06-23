@@ -1,0 +1,8 @@
+{
+  "defaultTitle": "扫红牛罐底二维码",
+  "usingComponents": {
+    "xh-scan-code": "/components/xh-scan-code",
+    "xh-notify": "/components/xh-notify",
+    "repayments": "/pages/personal/tankBottomCode/repayments"
+  }
+}

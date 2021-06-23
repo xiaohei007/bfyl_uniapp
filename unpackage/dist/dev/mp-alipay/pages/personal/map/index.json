@@ -1,0 +1,6 @@
+{
+  "defaultTitle": "附近兑奖商铺",
+  "usingComponents": {
+    "xh-notify": "/components/xh-notify"
+  }
+}

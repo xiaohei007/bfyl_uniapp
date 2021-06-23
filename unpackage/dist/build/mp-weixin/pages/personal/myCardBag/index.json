@@ -1,0 +1,11 @@
+{
+  "navigationBarTitleText": "兑换劵",
+  "navigationBarBackgroundColor": "#E60D1E",
+  "navigationBarTextStyle": "white",
+  "usingComponents": {
+    "van-button": "/wxcomponents/vant-weapp/button/index",
+    "home-tabs": "/pages/personal/myCardBag/homeTabs",
+    "confirm-exchange": "/pages/personal/myCardBag/confirmExchange",
+    "mescroll-item": "/pages/personal/myCardBag/mescroll-item"
+  }
+}

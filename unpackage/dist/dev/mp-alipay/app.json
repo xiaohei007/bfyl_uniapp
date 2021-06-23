@@ -1,0 +1,72 @@
+{
+  "pages": [
+    "pages/tabBar/home/index",
+    "pages/tabBar/personal/index",
+    "pages/tabBar/happyCows/happyCows",
+    "pages/tabBar/service/service",
+    "pages/login/login",
+    "pages/webview/webview"
+  ],
+  "subPackages": [
+    {
+      "root": "pages/personal/",
+      "pages": [
+        "myCardBag/index",
+        "storesCode/index",
+        "tankBottomCode/tankBottomCode",
+        "exchangeCode/index",
+        "sweepRingCode/sweepRingCode",
+        "xhVideo/index",
+        "favoredMovie/index",
+        "aboutUs/index",
+        "map/index"
+      ],
+      "name": "personal"
+    }
+  ],
+  "window": {
+    "titleBarColor": "#FFFFFF",
+    "backgroundColor": "#F0F0F0"
+  },
+  "tabBar": {
+    "selectedColor": "#DD524D",
+    "items": [
+      {
+        "pagePath": "pages/tabBar/home/index",
+        "name": "首页",
+        "icon": "static/tabsImg/personal.png",
+        "activeIcon": "static/tabsImg/personal_select.png"
+      },
+      {
+        "pagePath": "pages/tabBar/personal/index",
+        "name": "个人中心",
+        "icon": "static/tabsImg/home-icon.png",
+        "activeIcon": "static/tabsImg/home-select-icon.png"
+      },
+      {
+        "pagePath": "pages/tabBar/happyCows/happyCows",
+        "name": "牛牛乐园",
+        "icon": "static/tabsImg/niuniu.png",
+        "activeIcon": "static/tabsImg/niuniu_select.png"
+      },
+      {
+        "pagePath": "pages/tabBar/service/service",
+        "name": "客服中心",
+        "icon": "static/tabsImg/customer.png",
+        "activeIcon": "static/tabsImg/customer_select.png"
+      }
+    ]
+  },
+  "usingComponents": {
+    "mescroll-uni": "/components/mescroll-uni/mescroll-uni",
+    "easy-loadimage": "/components/easy-loadimage",
+    "xh-banner-ads": "/components/xh-banner-ads",
+    "xh-check": "/components/xh-check",
+    "xh-dialog": "/components/xh-dialog",
+    "xh-msg-dialog": "/components/xh-msg-dialog",
+    "xh-navbar": "/components/xh-navbar",
+    "xh-notify": "/components/xh-notify",
+    "xh-scan-code": "/components/xh-scan-code",
+    "xh-winning-window": "/components/xh-winning-window"
+  }
+}

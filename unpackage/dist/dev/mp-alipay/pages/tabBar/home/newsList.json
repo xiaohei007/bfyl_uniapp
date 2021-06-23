@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "mescroll-uni": "/components/mescroll-uni/mescroll-uni",
+    "easy-loadimage": "/components/easy-loadimage",
+    "xh-banner-ads": "/components/xh-banner-ads"
+  },
+  "component": true
+}

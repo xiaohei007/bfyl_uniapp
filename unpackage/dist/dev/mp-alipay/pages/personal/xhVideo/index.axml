@@ -1,0 +1,1 @@
+<view class="xh-video"><video id="myVideo" src="{{url}}" controls="{{true}}" autoplay="{{true}}" data-event-opts="{{[['error',[['videoErrorCallback',['$event']]]]]}}" onError="__e"></video></view>

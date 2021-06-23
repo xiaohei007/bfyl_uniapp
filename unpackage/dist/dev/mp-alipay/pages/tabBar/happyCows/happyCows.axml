@@ -1,0 +1,1 @@
+<view class="niuniu-paradise"><image class="niuniu-paradise-bg" src="{{bgImage}}"></image><image class="niuniu-paradise-btn tada" src="{{btnImage}}" data-event-opts="{{[['tap',[['goNiuniuParadise',['$event']]]]]}}" onTap="__e"></image></view>

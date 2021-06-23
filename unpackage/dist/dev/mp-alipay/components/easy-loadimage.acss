@@ -1,0 +1,162 @@
+@charset "UTF-8";
+/**
+ * 这里是uni-app内置的常用样式变量
+ *
+ * uni-app 官方扩展插件及插件市场（https://ext.dcloud.net.cn）上很多三方插件均使用了这些样式变量
+ * 如果你是插件开发者，建议你使用scss预处理，并在插件代码中直接使用这些变量（无需 import 这个文件），方便用户通过搭积木的方式开发整体风格一致的App
+ *
+ */
+/**
+ * 如果你是App开发者（插件使用者），你可以通过修改这些变量来定制自己的插件主题，实现自定义主题功能
+ *
+ * 如果你的项目同样使用了scss预处理，你也可以直接在你的 scss 代码中使用如下变量，同时无需 import 这个文件
+ */
+/* 颜色变量 */
+/* 行为相关颜色 */
+/* 文字基本颜色 */
+/* 背景颜色 */
+/* 边框颜色 */
+/* 尺寸变量 */
+/* 文字尺寸 */
+/* 图片尺寸 */
+/* Border Radius */
+/* 水平间距 */
+/* 垂直间距 */
+/* 透明度 */
+/* 文章场景相关 */
+.easy-loadimage {
+  position: relative;
+  /* 渐变过渡效果处理 */
+  /* 加载失败、加载中的占位图样式控制 */
+  /* 转圈 */
+  /* 动态灰色若隐若现 */
+}
+.easy-loadimage .origin-img {
+  width: 100%;
+  height: 100%;
+  opacity: 0.3;
+  will-change: transform;
+}
+.easy-loadimage .origin-img.show-transition {
+  -webkit-transition: opacity 1.2s;
+  transition: opacity 1.2s;
+  opacity: 1;
+}
+.easy-loadimage .origin-img.no-transition {
+  opacity: 1;
+}
+.easy-loadimage .loadfail-img {
+  min-height: 200rpx;
+  height: 100%;
+  width: 100%;
+  background: url(/static/images/loadfail.png) no-repeat center;
+  background-size: 50%;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.easy-loadimage .loading-img {
+  min-height: 200rpx;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+}
+.easy-loadimage .spin-circle {
+  background: url(/static/images/loading.gif) no-repeat center;
+  background-size: 100rpx;
+}
+.easy-loadimage .looming-gray {
+  -webkit-animation: looming-gray 1s infinite linear;
+          animation: looming-gray 1s infinite linear;
+  background-color: #e3e3e3;
+}
+.W-H-fill {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+.H-230 {
+  height: 290rpx;
+  position: relative;
+  overflow: hidden;
+  border-radius: 5px;
+}
+.news-imageclass {
+  height: 186rpx;
+  width: 330rpx;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+  font-size: 0;
+  border-radius: 5px;
+  margin-right: 20rpx;
+}
+@-webkit-keyframes looming-gray {
+0% {
+    background-color: #e3e3e3aa;
+}
+50% {
+    background-color: #e3e3e3;
+}
+100% {
+    background-color: #e3e3e3aa;
+}
+}
+@keyframes looming-gray {
+0% {
+    background-color: #e3e3e3aa;
+}
+50% {
+    background-color: #e3e3e3;
+}
+100% {
+    background-color: #e3e3e3aa;
+}
+}
+/* 骨架屏1 */
+.skeleton-1 {
+  background-color: #e3e3e3;
+  background-image: -webkit-linear-gradient(350deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.2) 50%, rgba(255, 255, 255, 0) 80%);
+  background-image: linear-gradient(100deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.2) 50%, rgba(255, 255, 255, 0) 80%);
+  background-size: 100rpx 100%;
+  background-repeat: repeat-y;
+  background-position: 0 0;
+  -webkit-animation: skeleton-1 .6s infinite;
+          animation: skeleton-1 .6s infinite;
+}
+@-webkit-keyframes skeleton-1 {
+to {
+    background-position: 200% 0;
+}
+}
+@keyframes skeleton-1 {
+to {
+    background-position: 200% 0;
+}
+}
+/* 骨架屏2 */
+.skeleton-2 {
+  background-image: -webkit-linear-gradient(right, #fefefe 0%, #e6e6e6 50%, #fefefe 100%);
+  background-image: linear-gradient(-90deg, #fefefe 0%, #e6e6e6 50%, #fefefe 100%);
+  background-size: 400% 400%;
+  background-position: 0 0;
+  -webkit-animation: skeleton-2 1.2s ease-in-out infinite;
+          animation: skeleton-2 1.2s ease-in-out infinite;
+}
+@-webkit-keyframes skeleton-2 {
+to {
+    background-position: -135% 0;
+}
+}
+@keyframes skeleton-2 {
+to {
+    background-position: -135% 0;
+}
+}
+

@@ -1,0 +1,1 @@
+<view class="xh-navbar" style="{{'padding-top:'+(deviceInfo.statusBarHeight+'px')+';'+('background-color:'+(bgColor)+';')+('background-image:'+(bgImage)+';')}}"><view class="xh-navbar-left"><slot></slot></view><text style="{{'color:'+(color)+';'}}">{{title}}</text></view>

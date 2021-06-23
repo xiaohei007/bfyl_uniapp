@@ -1,0 +1,10 @@
+{
+  "navigationStyle": "custom",
+  "navigationBarTextStyle": "white",
+  "navigationBarTitleText": "附近兑换商铺",
+  "disableScroll": true,
+  "usingComponents": {
+    "van-button": "/wxcomponents/vant-weapp/button/index",
+    "van-rate": "/wxcomponents/vant-weapp/rate/index"
+  }
+}

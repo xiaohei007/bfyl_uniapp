@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "扫码记录",
+  "usingComponents": {
+    "van-calendar": "/wxcomponents/vant-weapp/calendar/index"
+  }
+}

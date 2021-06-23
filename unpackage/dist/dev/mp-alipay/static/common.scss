@@ -1,0 +1,173 @@
+	/*弹窗按钮样式*/
+	.xh-toast-button {
+		height: RPX(45);
+		background: #f6e2b3;
+		border-radius: 999px;
+		margin: 0 RPX(35) 0;
+		font-size: RPX(17);
+		color: #D62019;
+		font-weight: bold;
+		line-height: RPX(45);
+		text-align: center;
+	}
+
+	/* 隐藏滚动条 */
+	::-webkit-scrollbar {
+		display: none;
+		width: 0;
+		height: 0;
+		color: transparent;
+	}
+	
+	.xh-text-dialog {
+		position: fixed;
+		  top: 0;
+		  left: 0;
+		  width: 100%;
+		  height: 100%;
+		  z-index: 9999;	
+	
+		.xh-text-dialog-body {
+			position: fixed;
+			top: 50%;
+			left: RPX(15);
+			right: RPX(15);
+			z-index: 1;
+		}
+		
+		.xh-text-dialog-header{
+			height: RPX(140);
+			width: 70%;
+			position: relative;
+			z-index: 1;
+			display: block;
+			margin: 0 auto RPX(60);
+		}
+		.xh-text-dialog-arc{
+			position: absolute;
+			height: RPX(100);
+			top:RPX(138);
+			left: RPX(21);
+			right: RPX(21);
+		}
+		
+		.xh-text-dialog-icons{
+			width: RPX(45);
+			height: RPX(48);
+			position: absolute;
+			bottom: RPX(45);
+			left: 50%;
+			transform: translateX(-50%);
+		}
+		.xh-text-dialog-line{
+			height: 30rpx;
+			margin-top: 30rpx;
+		}
+	
+		
+		
+	
+		.xh-text-dialog-bg {
+			position: absolute;
+			left: RPX(21);
+			right: RPX(21);
+			bottom: 0;
+			top: RPX(105);
+			border-radius: 20px;
+			z-index: -1;
+			border: 3px solid #FFCB3E;
+		}
+		.dialog-bg{
+			position: absolute;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			top: 0;
+		}
+	
+		.xh-text-dialog-black {
+			position: fixed;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			top: 0;
+			background-color: $uni-bg-color-mask;
+		}
+	
+		.close {
+			width: RPX(40);
+			height: RPX(40);
+			position: fixed;
+			bottom: 12%;
+			left: 50%;
+			transform: translateX(-50%);
+			z-index: 1;
+		}
+	}
+	
+	@keyframes fadeInOpacity {
+		0% {
+			-webkit-transform:  translateY(2000px);
+			transform:  translateY(2000px);
+		}
+	
+		to {
+			-webkit-transform: translateX(-50%) translateY(0);
+			transform: translateX(-50%) translateY(0);
+		}
+	}
+	
+	.fadeInOpacity {
+		-webkit-animation-name: fadeInOpacity;
+		animation-name: fadeInOpacity;
+		-webkit-animation-duration: 1s;
+		-webkit-animation-fill-mode: both;
+		animation-duration: 1s;
+		animation-fill-mode: both;
+	}
+	
+	@keyframes fadeInDownBig {
+		0% {
+			-webkit-transform:  translateY(-2000px);
+			opacity: 0;
+			transform:  translateY(-2000px);
+		}
+	
+		to {
+			-webkit-transform: translateY(-60%);
+			opacity: 1;
+			transform: translateY(-60%);
+		}
+	}
+	
+	.fadeInDownBig {
+		-webkit-animation-name: fadeInDownBig;
+		animation-name: fadeInDownBig;
+		-webkit-animation-duration: 1s;
+		-webkit-animation-fill-mode: both;
+		animation-duration: 1s;
+		animation-fill-mode: both;
+	}
+	/*自定义弹窗*/
+	.xhDialog{
+		-webkit-animation-name: xhDialog;
+		animation-name: xhDialog;
+		-webkit-animation-duration: 0.5s;
+		-webkit-animation-fill-mode: both;
+		animation-duration: 0.5s;
+		animation-fill-mode: both;
+	}
+	
+	@-webkit-keyframes xhDialog {
+		0% {
+			-webkit-transform:  translateY(-2000px);
+			opacity: 0;
+			transform:  translateY(-2000px);
+		}
+	
+		to {
+			-webkit-transform: translateY(-60%);
+			opacity: 1;
+			transform: translateY(-60%);
+		}
+	}

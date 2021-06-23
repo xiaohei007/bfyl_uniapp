@@ -1,0 +1,88 @@
+{
+  "pages": [
+    "pages/tabBar/home/index",
+    "pages/tabBar/personal/index",
+    "pages/tabBar/service/service",
+    "pages/login/login",
+    "pages/webview/webview",
+    "pages/noLocation/noLocation"
+  ],
+  "subPackages": [
+    {
+      "root": "pages/personal/",
+      "pages": [
+        "myCardBag/index",
+        "storesCode/index",
+        "tankBottomCode/tankBottomCode",
+        "exchangeCode/index",
+        "sweepRingCode/sweepRingCode",
+        "xhVideo/index",
+        "favoredMovie/index",
+        "aboutUs/index",
+        "shop/index",
+        "scanRecord/scanRecord",
+        "myPoints/index",
+        "scanResult/index",
+        "welfare/index"
+      ],
+      "name": "personal"
+    }
+  ],
+  "window": {
+    "navigationBarTextStyle": "black",
+    "navigationBarBackgroundColor": "#FFFFFF",
+    "backgroundColor": "#F0F0F0"
+  },
+  "tabBar": {
+    "selectedColor": "#DD524D",
+    "borderStyle": "white",
+    "list": [
+      {
+        "pagePath": "pages/tabBar/home/index",
+        "iconPath": "static/tabsImg/personal.png",
+        "selectedIconPath": "static/tabsImg/personal_select.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/tabBar/personal/index",
+        "iconPath": "static/tabsImg/home-icon.png",
+        "selectedIconPath": "static/tabsImg/home-select-icon.png",
+        "text": "个人中心"
+      },
+      {
+        "pagePath": "pages/tabBar/service/service",
+        "iconPath": "static/tabsImg/customer.png",
+        "selectedIconPath": "static/tabsImg/customer_select.png",
+        "text": "客服中心"
+      }
+    ]
+  },
+  "preloadRule": {
+    "pages/tabBar/personal/index": {
+      "network": "all",
+      "packages": [
+        "personal"
+      ]
+    }
+  },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "判断用户是否在常用地址登录"
+    }
+  },
+  "usingComponents": {
+    "mescroll-uni": "/components/mescroll-uni/mescroll-uni",
+    "easy-loadimage": "/components/easy-loadimage",
+    "xh-banner-ads": "/components/xh-banner-ads",
+    "xh-check": "/components/xh-check",
+    "xh-msg-dialog": "/components/xh-msg-dialog",
+    "xh-notify": "/components/xh-notify",
+    "xh-scan-code": "/components/xh-scan-code",
+    "user-guide": "/components/userGuide",
+    "repayments": "/components/repayments",
+    "xh-navbar": "/components/xhNavbar/xh-navbar",
+    "mescroll-body": "/components/mescroll-uni/mescroll-body",
+    "xh-steps": "/components/xh-steps"
+  },
+  "sitemapLocation": "sitemap.json"
+}

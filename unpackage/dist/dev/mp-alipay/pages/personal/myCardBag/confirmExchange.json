@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "xh-dialog": "/components/xh-dialog"
+  },
+  "component": true
+}

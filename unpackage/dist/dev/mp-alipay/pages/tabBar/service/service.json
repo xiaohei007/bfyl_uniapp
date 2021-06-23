@@ -1,0 +1,7 @@
+{
+  "defaultTitle": "客服中心",
+  "usingComponents": {
+    "van-row": "/wxcomponents/vant-weapp/row/index",
+    "van-col": "/wxcomponents/vant-weapp/col/index"
+  }
+}
