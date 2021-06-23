@@ -1,6 +1,6 @@
 <template>
 	<view class="activity">
-		{{adData.A1.name}}
+		热门活动
 	</view>
 </template>
 
