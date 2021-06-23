@@ -96,6 +96,8 @@
 	page {
 		font-family: PingFangSC, PingFangSC-Medium;
 	}
+	//字体图标
+	@import './static/xhIconfont.scss';
 	//公共css
 	@import './static/common.scss';
 	@import './static/animate.min.scss';

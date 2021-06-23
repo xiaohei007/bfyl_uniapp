@@ -1,0 +1,70 @@
+{
+  "pages": [
+    "pages/tabBar/activity/index",
+    "pages/tabBar/news/index",
+    "pages/tabBar/shopCode/index",
+    "pages/tabBar/pointsMall/index",
+    "pages/tabBar/mine/index",
+    "pages/login/login",
+    "pages/webview/webview",
+    "pages/noLocation/noLocation"
+  ],
+  "subPackages": [],
+  "window": {
+    "navigationBarTextStyle": "black",
+    "navigationBarBackgroundColor": "#FFFFFF",
+    "backgroundColor": "#F0F0F0"
+  },
+  "tabBar": {
+    "selectedColor": "#DD524D",
+    "borderStyle": "white",
+    "list": [
+      {
+        "pagePath": "pages/tabBar/activity/index",
+        "iconPath": "static/tabsImg/activity.png",
+        "selectedIconPath": "static/tabsImg/activitys.png",
+        "text": "活动"
+      },
+      {
+        "pagePath": "pages/tabBar/news/index",
+        "iconPath": "static/tabsImg/notice.png",
+        "selectedIconPath": "static/tabsImg/notices.png",
+        "text": "消息"
+      },
+      {
+        "pagePath": "pages/tabBar/shopCode/index",
+        "iconPath": "static/tabsImg/storeQr.png",
+        "selectedIconPath": "static/tabsImg/storeQr.png",
+        "text": "店铺码"
+      },
+      {
+        "pagePath": "pages/tabBar/pointsMall/index",
+        "iconPath": "static/tabsImg/jifen.png",
+        "selectedIconPath": "static/tabsImg/jifens.png",
+        "text": "积分商城"
+      },
+      {
+        "pagePath": "pages/tabBar/mine/index",
+        "iconPath": "static/tabsImg/mine.png",
+        "selectedIconPath": "static/tabsImg/mines.png",
+        "text": "我的"
+      }
+    ]
+  },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "判断用户是否在常用地址登录"
+    }
+  },
+  "usingComponents": {
+    "mescroll-uni": "/components/mescroll-uni/mescroll-uni",
+    "easy-loadimage": "/components/easy-loadimage",
+    "xh-banner-ads": "/components/xh-banner-ads",
+    "xh-check": "/components/xh-check",
+    "xh-notify": "/components/xh-notify",
+    "user-guide": "/components/userGuide",
+    "xh-navbar": "/components/xhNavbar/xh-navbar",
+    "mescroll-body": "/components/mescroll-uni/mescroll-body"
+  },
+  "sitemapLocation": "sitemap.json"
+}

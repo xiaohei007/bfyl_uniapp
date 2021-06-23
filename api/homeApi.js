@@ -7,3 +7,18 @@ export function adGet() {
 		isNoLoading: true
 	})
 }
+
+//获取广告地址
+export function getArticle() {
+	return HTTP.post({
+		url: '/api/tools/article',
+		isNoLoading: true
+	})
+}
+//获取广告地址
+export function givelike() {
+	return HTTP.post({
+		url: '/api/tools/givelike',
+		isNoLoading: true
+	})
+}

@@ -1,26 +1,21 @@
 
 <template>
 	<view class="login">
-		<xh-navbar  title="登录" titleColor="#000000" titleAlign="titleCenter"   leftImage="../../static/images/home.png" @leftCallBack="homeClick" :leftCallBack="true" :isHome="true"/>
 		<!-- 欢迎登陆 -->
-		<view class="wecome-login">
-			<image class="wecome-logo"  src="../../static/images/logo.png"></image>
-			<view class="wecome-msg">
-				欢迎来到<text class="wecome-msg-stress">彬纷享礼</text>请登录
-			</view>
-		</view>
-		<!-- 提示信息 -->
-		<view class="tips">
-			请点击下方按钮跳转微信授权登录
-		</view>
+         <image class="login-icon" src="../../static/images/login_icon.png"></image>
+		 <!-- 登录提示 -->
+		 <view class="login-tips-title">
+		 	未登录
+		 </view>
+		 <view class="login-tips-text">
+		 	请点击下方按钮跳转微信授权登录
+		 </view>
 		<!-- 登录按钮 -->
 		<view class="login-btn">
 			<van-button v-if="!isAgreement" round type="primary" block color="linear-gradient(to right, #E71919, #A31015)"
 			 @click="login" size="large">微信授权登录</van-button>
-			 <van-button v-else-if="isgetUserProfile&&isAgreement" :loading="isDisabled" loading-text="登录中..." round type="primary" block color="linear-gradient(to right, #E71919, #A31015)" :disabled="isDisabled"
+			 <van-button v-else :loading="isDisabled" loading-text="登录中..." round type="primary" block color="linear-gradient(to right, #E71919, #A31015)" :disabled="isDisabled"
 			  @click="newLogin" size="large">微信授权登录</van-button>
-			<van-button v-else :loading="isDisabled" loading-text="登录中..." round type="primary" block color="linear-gradient(to right, #E71919, #A31015)" :disabled="isDisabled"
-			 @click="login" size="large" open-type="getUserInfo">微信授权登录</van-button>
 		</view>
 		<view class="cancel-login-btn">
 			<van-button  round type="default" block 
@@ -40,7 +35,7 @@
 			<text class="link-service" @click="linkService">联系客服</text>
 		</view>
 		<!-- 消息提示 -->
-		<xh-notify ref="xhNotify" :isCustom="true"/>
+		<xh-notify ref="xhNotify"/>
 	</view>
 </template>
 
@@ -63,8 +58,7 @@
 			return {
 				isDisabled: false,
 				isAgreement: false,
-				baseUrl:baseUrl,
-				isgetUserProfile:Boolean(wx.getUserProfile)
+				baseUrl:baseUrl
 			}
 		},
 		onLoad(option) {
@@ -142,7 +136,6 @@
 				if(_userData){
 				  return this.newWXLogin(_userData)
 				}
-				
 				//获取用户加密信息
 				wx.getUserProfile({
 					lang:"zh_CN",
@@ -198,7 +191,7 @@
 								}
 								//登录成功
 								uni.switchTab({
-									url: '/pages/tabBar/personal/index'
+									url: '/pages/tabBar/activity/index'
 								})
 							}
 						})
@@ -256,123 +249,6 @@
 						})
 					}
 				})
-			},
-			/*微信登录*/
-			login() {
-				//未勾选协议
-				if (!this.isAgreement) {
-					return this.$refs.xhNotify.show({
-						type: "warning",
-						message: "请阅读并同意登录协议",
-						duration: 2000
-					})
-				}
-				//防止多次点击
-				this.isDisabled = true
-				this.wxlogin().then(res => {
-
-					//发起登录
-					this.updateUser().then((res) => {
-						//异步获取用户信息
-						this.getUserInfo()
-						//提示成功	
-						this.$refs.xhNotify.show({
-							type: "success",
-							message: "登录成功",
-							duration: 1500,
-							onClose: () => {
-								if (redirect) {
-									//登录成功
-									this.$router.redirectTo({
-										url: redirect
-									})
-									return clearRedirect() //清空
-								}
-								//登录成功
-								uni.switchTab({
-									url: '/pages/tabBar/personal/index'
-								})
-							}
-						})
-					}).catch((err) => {
-						this.isDisabled = false
-						switch (err.code) {
-							case -2: //用户未同意授权地理位置
-								uni.showModal({
-									title: '定位授权',
-									content: '微信未授权定位或网络信号差(微信内设置无效时，可能需要前往“系统设置”允许微信定位权限)',
-									showCancel: false,
-									success: (res) => {
-										if (res.confirm) {
-											wx.getSetting({
-											  complete:(res) => {
-											    if(res.authSetting&&!res.authSetting['scope.userLocation']){
-												   return uni.openSetting({
-														success: (res) => {
-															if (!res.authSetting["scope.userLocation"]) {
-																return uni.showToast({
-																	title: '您未允许获取定位权限',
-																	icon: 'none',
-																	duration: 1500
-																})
-															}
-															//重启
-															this.login()
-														}
-													})
-												}
-												/*前往提示页*/
-												uni.navigateTo({
-													url:'/pages/noLocation/noLocation'
-												})
-											   }
-											})
-										}
-									}
-								})
-								break
-							case 0: //用户未同意授权获取用户信息
-								uni.showModal({
-									title: '微信绑定授权',
-									content: '请允许获取个人信息后重新进入绑定页面',
-									showCancel: false,
-									success: (res) => {
-										if (res.confirm) {
-											uni.openSetting({
-												success: (res) => {
-													if (!res.authSetting["scope.userInfo"]) {
-														return uni.showToast({
-															title: '您未允许获取个人信息',
-															icon: 'none',
-															duration: 1500
-														})
-													}
-													//重启
-													this.login()
-												}
-											})
-										}
-									}
-								})
-								break
-							case 2://其它未知错误
-								uni.showModal({
-									title:'温馨提示',
-									content:err.msg
-								})
-							    break	
-						}
-					})
-				}).catch((err) => {
-					// uni.hideLoading()
-					this.isDisabled = false
-					if(err.code === -1){
-						uni.showModal({
-							title:'温馨提示',
-							content:err.msg
-						})
-					}
-				})
 			}
 		}
 	}
@@ -380,41 +256,27 @@
 
 <style lang="scss">
 	.login {
-		.wecome-login {
-			color: #000000;
-			display: flex;
-			flex-direction: column;
-			align-items: center;
-			margin-top: RPX(109);
-		}
 
-		.wecome-logo {
-			width: RPX(80);
-			height: RPX(80);
-			margin-bottom: RPX(20);
-			border-radius: 50%;
+        .login-icon{
+			width: 260rpx;
+			height: 240rpx;
+			display: block;
+			margin: 120rpx auto 50rpx;
 		}
-
-		.wecome-msg {
-			font-size: RPX(20);
-			color: #000000;
-			margin-bottom: RPX(113);
-		}
-
-		.wecome-msg-stress {
-			color: #A61115;
-		}
-
-		.tips {
+		
+		.login-tips-title{
+			font-size: 36rpx;
+			color: #D33A29;
 			text-align: center;
-			color: #000000;
-			font-size: RPX(18);
-			margin-bottom: RPX(8);
 		}
-
+		.login-tips-text{
+			font-size: 28rpx;
+			color: #666666;
+			text-align: center;
+			margin-bottom: 72rpx;
+		}
 		.login-btn,.cancel-login-btn {
-			margin-left: RPX(37);
-			margin-right: RPX(37);
+			margin: 0 60rpx;
 		}
 		
 		.cancel-login-btn {

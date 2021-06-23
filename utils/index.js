@@ -23,6 +23,18 @@ export function parseQuery(url = '') {
 	return o
 }
 
+//filter广告数据
+export function filterAdData(arr = [], key) {
+	let _arr = []
+	for (let i = 0; i < arr.length; i++) {
+		let data = arr[i][key]
+		if (data) {
+			_arr.push(data)
+		}
+	}
+	return _arr
+}
+
 /**
  * @param {Function} func
  * @param {number} wait
