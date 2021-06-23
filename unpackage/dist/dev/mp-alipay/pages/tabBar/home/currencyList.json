@@ -1,7 +1,0 @@
-{
-  "usingComponents": {
-    "mescroll-uni": "/components/mescroll-uni/mescroll-uni",
-    "easy-loadimage": "/components/easy-loadimage"
-  },
-  "component": true
-}

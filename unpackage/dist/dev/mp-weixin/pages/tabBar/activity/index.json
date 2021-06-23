@@ -1,8 +1,0 @@
-{
-  "navigationBarTitleText": "活动",
-  "usingComponents": {
-    "home-tabs": "/pages/tabBar/activity/homeTabs",
-    "currency-list": "/pages/tabBar/activity/currencyList",
-    "news-list": "/pages/tabBar/activity/newsList"
-  }
-}

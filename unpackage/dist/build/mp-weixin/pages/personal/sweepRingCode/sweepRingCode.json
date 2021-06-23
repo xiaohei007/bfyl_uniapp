@@ -1,9 +1,0 @@
-{
-  "navigationBarTitleText": "扫拉环二维码",
-  "usingComponents": {
-    "xh-winning-window": "/pages/personal/sweepRingCode/xh-winning-window",
-    "win-again": "/pages/personal/sweepRingCode/winAgain",
-    "win-again-three": "/pages/personal/sweepRingCode/winAgainThree",
-    "win-again-four": "/pages/personal/sweepRingCode/winAgainFour"
-  }
-}

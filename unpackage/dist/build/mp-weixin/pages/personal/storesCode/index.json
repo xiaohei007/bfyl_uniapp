@@ -1,6 +1,0 @@
-{
-  "navigationBarTitleText": "扫兑换商户的店铺码",
-  "usingComponents": {
-    "binding-succeeded": "/pages/personal/storesCode/bindingSucceeded"
-  }
-}

@@ -1,7 +1,0 @@
-{
-  "defaultTitle": "关于我们",
-  "usingComponents": {
-    "van-cell": "/wxcomponents/vant-weapp/cell/index",
-    "van-cell-group": "/wxcomponents/vant-weapp/cell-group/index"
-  }
-}

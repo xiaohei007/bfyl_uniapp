@@ -1,8 +1,0 @@
-{
-  "defaultTitle": "扫拉环二维码",
-  "usingComponents": {
-    "xh-scan-code": "/components/xh-scan-code",
-    "xh-winning-window": "/components/xh-winning-window",
-    "xh-msg-dialog": "/components/xh-msg-dialog"
-  }
-}

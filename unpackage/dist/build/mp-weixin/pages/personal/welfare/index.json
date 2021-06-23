@@ -1,7 +1,0 @@
-{
-  "navigationBarTitleText": "其它福利",
-  "usingComponents": {
-    "welfare-tabs": "/pages/personal/welfare/welfareTabs",
-    "mescroll-item": "/pages/personal/welfare/mescroll-item"
-  }
-}

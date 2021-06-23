@@ -1,8 +1,0 @@
-{
-  "defaultTitle": "兑换码",
-  "usingComponents": {
-    "xh-msg-dialog": "/components/xh-msg-dialog",
-    "xh-notify": "/components/xh-notify",
-    "exchange-success": "/pages/personal/exchangeCode/exchangeSuccess"
-  }
-}

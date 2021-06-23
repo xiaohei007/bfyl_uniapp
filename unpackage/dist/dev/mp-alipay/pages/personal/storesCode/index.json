@@ -1,9 +1,0 @@
-{
-  "defaultTitle": "扫兑奖商户的店铺码",
-  "usingComponents": {
-    "xh-scan-code": "/components/xh-scan-code",
-    "xh-msg-dialog": "/components/xh-msg-dialog",
-    "xh-notify": "/components/xh-notify",
-    "binding-succeeded": "/pages/personal/storesCode/bindingSucceeded"
-  }
-}

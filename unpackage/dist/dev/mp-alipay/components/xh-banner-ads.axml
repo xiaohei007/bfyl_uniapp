@@ -1,1 +1,0 @@
-<view class="adContainer-box"><block a:if="{{!isError}}"><view class="adContainer" hover-class="adContainer-hover"><ad-custom vue-id="5c22569b-1" unit-id="{{unitId}}" data-event-opts="{{[['^error',[['adError']]]]}}" onError="__e" onVueInit="__l"></ad-custom></view></block></view>

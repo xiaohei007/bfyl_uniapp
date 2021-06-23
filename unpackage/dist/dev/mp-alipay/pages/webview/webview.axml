@@ -1,1 +1,0 @@
-<block a:if="{{link}}"><web-view webview-styles="{{webviewStyles}}" src="{{link}}"></web-view></block>

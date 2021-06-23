@@ -1,1 +1,0 @@
-<cover-view class="{{(('xh-notify')+' '+config.type)}}" style="{{'display:'+(config.isShow?'block':'none')+';'+('animation-duration:'+(second)+';')}}">{{''+config.message+''}}</cover-view>

@@ -1,9 +1,0 @@
-{
-  "defaultTitle": "首页",
-  "usingComponents": {
-    "home-tabs": "/pages/tabBar/home/homeTabs",
-    "currency-list": "/pages/tabBar/home/currencyList",
-    "news-list": "/pages/tabBar/home/newsList",
-    "user-guide": "/pages/tabBar/home/userGuide"
-  }
-}

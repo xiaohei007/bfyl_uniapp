@@ -1,1 +1,0 @@
-<view class="welfare-not-converted"><image class="wnc-card-icon" src="{{config.icon}}"></image><image class="wnc-bg" src="../static/welfare_item_icon.png"></image><view class="card-info"><view class="card-name">{{''+(config.name||config.desc)+''}}</view></view><view data-event-opts="{{[['tap',[['toUse',['$event']]]]]}}" class="to-use" bindtap="__e">去领取</view></view>

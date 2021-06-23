@@ -1,6 +1,0 @@
-{
-  "navigationStyle": "custom",
-  "usingComponents": {
-    "van-rate": "/wxcomponents/vant-weapp/rate/index"
-  }
-}
